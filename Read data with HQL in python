@@ -1,0 +1,38 @@
+from impala import dbapi
+
+#connect 
+conn = dbapi.connect(
+    host=HOST,
+    port=PORT,
+    user=USER,
+    password=PASSWORD,
+    database=DATABASE,
+    auth_mechanism='PLAIN'
+)
+cursor = conn.cursor()
+conn
+
+
+# year loop
+for year in ('2019', '2020'):
+# month loop
+    for month1 in np.arange(1,13):
+        month='%02d' %month1 #month format
+        
+        print(year)
+        print(month)
+
+       # SQL query
+        sql='''
+        select
+        from
+        where
+        group by
+        order by        
+          '''
+
+        # import data from server
+        read=pd.read_sql(sql,conn)
+        
+        #YOU HAVE TO MERGE OR CONCATENATE MONTHLY DATA 
+
