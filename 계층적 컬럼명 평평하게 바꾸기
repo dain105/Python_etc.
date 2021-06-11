@@ -1,0 +1,2 @@
+컬렴명을 조인한 다음  공백 제거
+df.columns.map(' '.join).str.strip()
